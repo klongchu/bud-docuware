@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Document\Thumbnail;
+namespace Klongchu\DocuWare\Requests\Document\Thumbnail;
 
-use CodebarAg\DocuWare\Responses\Document\Thumbnail\GetDocumentDownloadThumbnailResponse;
+use Klongchu\DocuWare\Responses\Document\Thumbnail\GetDocumentDownloadThumbnailResponse;
 use Illuminate\Support\Facades\Cache;
 use Saloon\CachePlugin\Contracts\Cacheable;
 use Saloon\CachePlugin\Drivers\LaravelCacheDriver;
@@ -27,7 +27,7 @@ class GetDocumentDownloadThumbnailRequest extends Request implements Cacheable
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->fileCabinetId.'/Rendering/'.$this->documentId.'-'.$this->section.'/Thumbnail';
+        return '/FileCabinets/' . $this->fileCabinetId . '/Rendering/' . $this->documentId . '-' . $this->section . '/Thumbnail';
     }
 
     public function resolveCacheDriver(): LaravelCacheDriver

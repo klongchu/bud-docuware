@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Document;
+namespace Klongchu\DocuWare\Requests\Document;
 
-use CodebarAg\DocuWare\Responses\Document\DeleteDocumentResponse;
+use Klongchu\DocuWare\Responses\Document\DeleteDocumentResponse;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Http\Response;
@@ -19,7 +19,7 @@ class DeleteDocumentRequest extends Request
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->fileCabinetId.'/Documents/'.$this->documentId;
+        return '/FileCabinets/' . $this->fileCabinetId . '/Documents/' . $this->documentId;
     }
 
     public function createDtoFromResponse(Response $response): mixed

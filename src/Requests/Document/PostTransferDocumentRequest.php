@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Document;
+namespace Klongchu\DocuWare\Requests\Document;
 
-use CodebarAg\DocuWare\Responses\Document\PostTransferDocumentResponse;
+use Klongchu\DocuWare\Responses\Document\PostTransferDocumentResponse;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
@@ -26,7 +26,7 @@ class PostTransferDocumentRequest extends Request implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->destinationFileCabinetId.'/Task/Transfer';
+        return '/FileCabinets/' . $this->destinationFileCabinetId . '/Task/Transfer';
     }
 
     protected function defaultHeaders(): array

@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Document;
+namespace Klongchu\DocuWare\Requests\Document;
 
-use CodebarAg\DocuWare\Responses\Document\GetDocumentsResponse;
+use Klongchu\DocuWare\Responses\Document\GetDocumentsResponse;
 use Illuminate\Support\Facades\Cache;
 use Saloon\CachePlugin\Contracts\Cacheable;
 use Saloon\CachePlugin\Drivers\LaravelCacheDriver;
@@ -24,7 +24,7 @@ class GetDocumentsRequest extends Request implements Cacheable
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->fileCabinetId.'/Documents';
+        return '/FileCabinets/' . $this->fileCabinetId . '/Documents';
     }
 
     public function resolveCacheDriver(): LaravelCacheDriver

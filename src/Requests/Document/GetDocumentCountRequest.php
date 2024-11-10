@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Document;
+namespace Klongchu\DocuWare\Requests\Document;
 
-use CodebarAg\DocuWare\Responses\Document\GetDocumentCountResponse;
+use Klongchu\DocuWare\Responses\Document\GetDocumentCountResponse;
 use Illuminate\Support\Facades\Cache;
 use Saloon\CachePlugin\Contracts\Cacheable;
 use Saloon\CachePlugin\Drivers\LaravelCacheDriver;
@@ -25,7 +25,7 @@ class GetDocumentCountRequest extends Request implements Cacheable
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->fileCabinetId.'/Query/CountExpression';
+        return '/FileCabinets/' . $this->fileCabinetId . '/Query/CountExpression';
     }
 
     public function resolveCacheDriver(): LaravelCacheDriver

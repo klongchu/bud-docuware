@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\DTO;
+namespace Klongchu\DocuWare\DTO;
 
-use CodebarAg\DocuWare\Exceptions\UnableToLoginNoCookies;
+use Klongchu\DocuWare\Exceptions\UnableToLoginNoCookies;
 use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
@@ -21,7 +21,7 @@ final class Cookie
         throw_if($cookieJar->toArray() === [], UnableToLoginNoCookies::create());
 
         $data = collect($cookieJar->toArray())
-            ->reject(fn (array $cookie) => Arr::get($cookie, 'Value') === '')
+            ->reject(fn(array $cookie) => Arr::get($cookie, 'Value') === '')
             ->firstWhere('Name', '.DWPLATFORMAUTH');
 
         return new self(

@@ -1,10 +1,10 @@
 <?php
 
-namespace CodebarAg\DocuWare\Responses\Document;
+namespace Klongchu\DocuWare\Responses\Document;
 
-use CodebarAg\DocuWare\DTO\Document;
-use CodebarAg\DocuWare\Events\DocuWareResponseLog;
-use CodebarAg\DocuWare\Support\EnsureValidResponse;
+use Klongchu\DocuWare\DTO\Document;
+use Klongchu\DocuWare\Events\DocuWareResponseLog;
+use Klongchu\DocuWare\Support\EnsureValidResponse;
 use Illuminate\Support\Collection;
 use Saloon\Http\Response;
 
@@ -18,6 +18,6 @@ final class GetDocumentsResponse
 
         $items = $response->throw()->json('Items');
 
-        return collect($items)->map(fn (array $item) => Document::fromJson($item));
+        return collect($items)->map(fn(array $item) => Document::fromJson($item));
     }
 }

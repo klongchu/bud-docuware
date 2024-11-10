@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Fields;
+namespace Klongchu\DocuWare\Requests\Fields;
 
-use CodebarAg\DocuWare\Responses\Fields\GetFieldsResponse;
+use Klongchu\DocuWare\Responses\Fields\GetFieldsResponse;
 use Illuminate\Support\Facades\Cache;
 use Saloon\CachePlugin\Contracts\Cacheable;
 use Saloon\CachePlugin\Drivers\LaravelCacheDriver;
@@ -24,7 +24,7 @@ class GetFieldsRequest extends Request implements Cacheable
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->fileCabinetId;
+        return '/FileCabinets/' . $this->fileCabinetId;
     }
 
     public function resolveCacheDriver(): LaravelCacheDriver

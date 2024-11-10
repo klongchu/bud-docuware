@@ -1,6 +1,6 @@
 <?php
 
-namespace CodebarAg\DocuWare\DTO;
+namespace Klongchu\DocuWare\DTO;
 
 use Exception;
 use Illuminate\Support\Arr;
@@ -40,7 +40,7 @@ class DocumentPaginator
 
     public function failed(): bool
     {
-        return ! $this->successful();
+        return !$this->successful();
     }
 
     public static function fromJson(
@@ -101,7 +101,7 @@ class DocumentPaginator
             last_page: $last_page ?? random_int(10, 20),
             from: $from ?? 1,
             to: $to ?? 10,
-            documents: $documents ?? collect(range(1, 10))->map(fn () => Document::fake()),
+            documents: $documents ?? collect(range(1, 10))->map(fn() => Document::fake()),
         );
     }
 }

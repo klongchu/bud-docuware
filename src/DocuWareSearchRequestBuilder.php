@@ -1,10 +1,10 @@
 <?php
 
-namespace CodebarAg\DocuWare;
+namespace Klongchu\DocuWare;
 
 use Carbon\Carbon;
-use CodebarAg\DocuWare\Exceptions\UnableToSearch;
-use CodebarAg\DocuWare\Requests\Search\GetSearchRequest;
+use Klongchu\DocuWare\Exceptions\UnableToSearch;
+use Klongchu\DocuWare\Requests\Search\GetSearchRequest;
 use Illuminate\Support\Str;
 use Saloon\Exceptions\InvalidResponseClassException;
 use Saloon\Exceptions\PendingRequestException;
@@ -187,7 +187,7 @@ class DocuWareSearchRequestBuilder
             if (count($operators) == 2) {
                 foreach ($operators as $index => $operator) {
                     throw_if(
-                        eval("return {$this->filters[$name][$index]->timestamp} {$operator} {$this->filters[$name][$index + 1]->timestamp};"),
+                        eval ("return {$this->filters[$name][$index]->timestamp} {$operator} {$this->filters[$name][$index + 1]->timestamp};"),
                         UnableToSearch::DivergedDateFilterRange(),
                     );
                     break;

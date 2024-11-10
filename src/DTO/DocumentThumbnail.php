@@ -1,6 +1,6 @@
 <?php
 
-namespace CodebarAg\DocuWare\DTO;
+namespace Klongchu\DocuWare\DTO;
 
 use Illuminate\Support\Arr;
 
@@ -14,7 +14,7 @@ final class DocumentThumbnail
         return new self(
             mime: $mime,
             data: $data,
-            base64: 'data:'.$mime.';base64,'.base64_encode($data),
+            base64: 'data:' . $mime . ';base64,' . base64_encode($data),
         );
     }
 

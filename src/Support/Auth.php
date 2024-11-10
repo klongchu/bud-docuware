@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Support;
+namespace Klongchu\DocuWare\Support;
 
-use CodebarAg\DocuWare\Exceptions\UnableToFindUrlCredential;
+use Klongchu\DocuWare\Exceptions\UnableToFindUrlCredential;
 use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Cache;
@@ -19,7 +19,7 @@ class Auth
     public static function store(CookieJar $cookies): void
     {
         $cookie = collect($cookies->toArray())
-            ->reject(fn (array $cookie) => Arr::get($cookie, 'Value') === '')
+            ->reject(fn(array $cookie) => Arr::get($cookie, 'Value') === '')
             ->firstWhere('Name', self::COOKIE_NAME);
 
         Cache::driver(self::cacheDriver())
@@ -40,7 +40,7 @@ class Auth
 
     public static function cookieJar(): ?CookieJar
     {
-        if (! self::cookies()) {
+        if (!self::cookies()) {
             return null;
         }
 

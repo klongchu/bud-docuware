@@ -1,9 +1,9 @@
 <?php
 
-namespace CodebarAg\DocuWare\Connectors;
+namespace Klongchu\DocuWare\Connectors;
 
-use CodebarAg\DocuWare\DTO\Config;
-use CodebarAg\DocuWare\Support\Auth;
+use Klongchu\DocuWare\DTO\Config;
+use Klongchu\DocuWare\Support\Auth;
 use GuzzleHttp\Cookie\CookieJar;
 use Saloon\Http\Connector;
 
@@ -28,7 +28,7 @@ class DocuWareDynamicConnector extends Connector
      */
     public function resolveBaseUrl(): string
     {
-        return $this->configuration->url.'/DocuWare/Platform';
+        return $this->configuration->url . '/DocuWare/Platform';
     }
 
     public function defaultHeaders(): array

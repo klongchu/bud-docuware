@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Organization;
+namespace Klongchu\DocuWare\Requests\Organization;
 
-use CodebarAg\DocuWare\Responses\Organization\GetOrganizationResponse;
+use Klongchu\DocuWare\Responses\Organization\GetOrganizationResponse;
 use Illuminate\Support\Facades\Cache;
 use Saloon\CachePlugin\Contracts\Cacheable;
 use Saloon\CachePlugin\Drivers\LaravelCacheDriver;
@@ -24,7 +24,7 @@ class GetOrganizationRequest extends Request implements Cacheable
 
     public function resolveEndpoint(): string
     {
-        return '/Organizations/'.$this->organizationId;
+        return '/Organizations/' . $this->organizationId;
     }
 
     public function resolveCacheDriver(): LaravelCacheDriver

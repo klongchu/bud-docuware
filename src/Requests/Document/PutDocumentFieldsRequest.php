@@ -1,9 +1,9 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Document;
+namespace Klongchu\DocuWare\Requests\Document;
 
-use CodebarAg\DocuWare\Exceptions\UnableToUpdateFields;
-use CodebarAg\DocuWare\Responses\Document\PutDocumentFieldsResponse;
+use Klongchu\DocuWare\Exceptions\UnableToUpdateFields;
+use Klongchu\DocuWare\Responses\Document\PutDocumentFieldsResponse;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
@@ -29,7 +29,7 @@ class PutDocumentFieldsRequest extends Request implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->fileCabinetId.'/Documents/'.$this->documentId.'/Fields';
+        return '/FileCabinets/' . $this->fileCabinetId . '/Documents/' . $this->documentId . '/Fields';
     }
 
     public function defaultBody(): array

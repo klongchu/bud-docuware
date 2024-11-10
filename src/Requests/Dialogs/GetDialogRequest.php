@@ -1,8 +1,8 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Dialogs;
+namespace Klongchu\DocuWare\Requests\Dialogs;
 
-use CodebarAg\DocuWare\Responses\Dialogs\GetDialogResponse;
+use Klongchu\DocuWare\Responses\Dialogs\GetDialogResponse;
 use Illuminate\Support\Facades\Cache;
 use Saloon\CachePlugin\Contracts\Cacheable;
 use Saloon\CachePlugin\Drivers\LaravelCacheDriver;
@@ -25,7 +25,7 @@ class GetDialogRequest extends Request implements Cacheable
 
     public function resolveEndpoint(): string
     {
-        return '/FileCabinets/'.$this->fileCabinetId.'/Dialogs/'.$this->dialogId;
+        return '/FileCabinets/' . $this->fileCabinetId . '/Dialogs/' . $this->dialogId;
     }
 
     public function resolveCacheDriver(): LaravelCacheDriver

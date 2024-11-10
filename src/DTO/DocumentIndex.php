@@ -1,6 +1,6 @@
 <?php
 
-namespace CodebarAg\DocuWare\DTO;
+namespace Klongchu\DocuWare\DTO;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
@@ -35,7 +35,7 @@ class DocumentIndex
     {
         $indexContent = (object) [
             'Fields' => $indexes
-                ->map(fn (DocumentIndex $index) => $index->values())
+                ->map(fn(DocumentIndex $index) => $index->values())
                 ->toArray(),
         ];
 
@@ -46,7 +46,7 @@ class DocumentIndex
     {
         $columnValues = (object) [
             'ColumnValue' => $indexes
-                ->map(fn (DocumentIndex $index) => $index->values())
+                ->map(fn(DocumentIndex $index) => $index->values())
                 ->toArray(),
         ];
 
@@ -112,7 +112,7 @@ class DocumentIndex
                 ? Arr::get($item, 'VALUE')
                 : Arr::get($values, $reference);
 
-            if (! $value || ! $field) {
+            if (!$value || !$field) {
                 return;
             }
 

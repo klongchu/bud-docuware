@@ -1,9 +1,9 @@
 <?php
 
-namespace CodebarAg\DocuWare\Support;
+namespace Klongchu\DocuWare\Support;
 
 use Carbon\Carbon;
-use CodebarAg\DocuWare\DTO\TableRow;
+use Klongchu\DocuWare\DTO\TableRow;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -14,7 +14,7 @@ class ParseValue
         ?array $field,
         int|float|Carbon|string|Collection $default = null,
     ): null|int|float|Carbon|string|Collection {
-        if (! $field || $field['IsNull']) {
+        if (!$field || $field['IsNull']) {
             return $default;
         }
 

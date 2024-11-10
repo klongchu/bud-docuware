@@ -1,10 +1,10 @@
 <?php
 
-namespace CodebarAg\DocuWare\Responses\FileCabinets;
+namespace Klongchu\DocuWare\Responses\FileCabinets;
 
-use CodebarAg\DocuWare\DTO\FileCabinet;
-use CodebarAg\DocuWare\Events\DocuWareResponseLog;
-use CodebarAg\DocuWare\Support\EnsureValidResponse;
+use Klongchu\DocuWare\DTO\FileCabinet;
+use Klongchu\DocuWare\Events\DocuWareResponseLog;
+use Klongchu\DocuWare\Support\EnsureValidResponse;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use Saloon\Http\Response;
@@ -19,6 +19,6 @@ final class GetFileCabinetsResponse
 
         $cabinets = $response->throw()->json('FileCabinet');
 
-        return collect($cabinets)->map(fn (array $cabinet) => FileCabinet::fromJson($cabinet));
+        return collect($cabinets)->map(fn(array $cabinet) => FileCabinet::fromJson($cabinet));
     }
 }

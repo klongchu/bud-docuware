@@ -1,21 +1,20 @@
 {
-  "name": "codebar-ag/laravel-docuware",
+  "name": "klongchu/laravel-docuware",
   "description": "DocuWare integration with Laravel",
   "keywords": [
     "laravel",
     "docuware",
-    "codebar-ag",
+    "klongchu",
     "laravel-docuware",
     "codebar Solutions AG",
     "Ricoh Schweiz AG"
   ],
-  "homepage": "https://github.com/codebar-ag/laravel-docuware",
+  "homepage": "https://github.com/klongchu/bud-docuware",
   "license": "MIT",
-  "authors": [
-    {
-      "name": "Sebastian Fix",
-      "email": "sebastian.fix@codebar.ch",
-      "homepage": "https://www.codebar.ch",
+  "authors": [{
+      "name": "Klongchu",
+      "email": "klongchu@gmail.com",
+      "homepage": "https://www.klongchu.dev",
       "role": "Sofware-Engineer"
     },
     {
@@ -26,7 +25,7 @@
   "require": {
     "php": "^8.2",
     "guzzlehttp/guzzle": "^7.6",
-    "illuminate/contracts": "^9.0|^10.0",
+    "illuminate/contracts": "^9.0|^10.0|^11.0",
     "nesbot/carbon": "^2.64.0",
     "saloonphp/cache-plugin": "^3.0",
     "saloonphp/saloon": "^3.0",
@@ -45,12 +44,12 @@
   },
   "autoload": {
     "psr-4": {
-      "CodebarAg\\DocuWare\\": "src"
+      "Klongchu\\DocuWare\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "CodebarAg\\DocuWare\\Tests\\": "tests"
+      "Klongchu\\DocuWare\\Tests\\": "tests"
     }
   },
   "scripts": {
@@ -71,10 +70,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "CodebarAg\\DocuWare\\DocuWareServiceProvider"
+        "Klongchu\\DocuWare\\DocuWareServiceProvider"
       ],
       "aliases": {
-        "DocuWare": "CodebarAg\\DocuWare\\Facades\\DocuWare"
+        "DocuWare": "Klongchu\\DocuWare\\Facades\\DocuWare"
       }
     }
   },

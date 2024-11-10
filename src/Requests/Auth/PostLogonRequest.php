@@ -1,6 +1,6 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Auth;
+namespace Klongchu\DocuWare\Requests\Auth;
 
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
@@ -15,7 +15,7 @@ class PostLogonRequest extends SoloRequest implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return config('docuware.credentials.url').'/DocuWare/Platform/Account/Logon';
+        return config('docuware.credentials.url') . '/DocuWare/Platform/Account/Logon';
     }
 
     protected function defaultBody(): array

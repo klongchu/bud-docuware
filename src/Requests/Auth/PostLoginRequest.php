@@ -1,9 +1,9 @@
 <?php
 
-namespace CodebarAg\DocuWare\Requests\Auth;
+namespace Klongchu\DocuWare\Requests\Auth;
 
-use CodebarAg\DocuWare\Events\DocuWareResponseLog;
-use CodebarAg\DocuWare\Support\EnsureValidResponse;
+use Klongchu\DocuWare\Events\DocuWareResponseLog;
+use Klongchu\DocuWare\Support\EnsureValidResponse;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Response;
@@ -28,7 +28,7 @@ class PostLoginRequest extends SoloRequest implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return $this->url.'/DocuWare/Platform/Account/Logon';
+        return $this->url . '/DocuWare/Platform/Account/Logon';
     }
 
     protected function defaultBody(): array

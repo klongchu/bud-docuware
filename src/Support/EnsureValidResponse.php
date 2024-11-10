@@ -1,9 +1,9 @@
 <?php
 
-namespace CodebarAg\DocuWare\Support;
+namespace Klongchu\DocuWare\Support;
 
-use CodebarAg\DocuWare\Exceptions\UnableToMakeRequest;
-use CodebarAg\DocuWare\Exceptions\UnableToProcessRequest;
+use Klongchu\DocuWare\Exceptions\UnableToMakeRequest;
+use Klongchu\DocuWare\Exceptions\UnableToProcessRequest;
 use Illuminate\Http\Client\Response;
 use Saloon\Http\Response as SaloonResponse;
 use Symfony\Component\HttpFoundation\Response as Status;
@@ -21,7 +21,7 @@ class EnsureValidResponse
             UnableToMakeRequest::create(),
         );
 
-        if (! $response->json('Message')) {
+        if (!$response->json('Message')) {
             return;
         }
 

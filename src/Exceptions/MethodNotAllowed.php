@@ -1,6 +1,6 @@
 <?php
 
-namespace CodebarAg\DocuWare\Exceptions;
+namespace Klongchu\DocuWare\Exceptions;
 
 use RuntimeException;
 
@@ -8,6 +8,6 @@ final class MethodNotAllowed extends RuntimeException
 {
     public static function create(): self
     {
-        return new self('This method is not allowed on connection '.config('docuware.connection').'.');
+        return new self('This method is not allowed on connection ' . config('docuware.connection') . '.');
     }
 }
